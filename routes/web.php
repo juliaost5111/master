@@ -42,7 +42,5 @@ Route::get('/Vasia',function() {
       Route::get('/user/{surname}/{name}', function ($surname,$name): string {
         return 'Hello'. $surname .''. $name;  
     });
-    Route::get('/city/{city?}', function ($city=1): string {
-        return 'Moskva'. $city;  
-    });
+
 ?>
