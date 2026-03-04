@@ -1,19 +1,8 @@
-<!-- php
-class PostController extends Controller
-{
-    public function show()
-    {
-        return view('post.show');
-    }
-} 
--->
-
 <x-layout>
 	<x-slot:title>
-		page title
+		{{ $title }} 
 	</x-slot>
 	
-	page content
+	{{ $text }}
 </x-layout>
 
-?>

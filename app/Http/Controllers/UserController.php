@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
-// {
+{
 //     public function show()
 //     {
 //         return 'hello world';
@@ -42,6 +42,6 @@ class UserController extends Controller
 //             return 'нет';
 //         }
 //     }
-// }
+ }
 
 ?>
