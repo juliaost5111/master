@@ -11,11 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('use', function (Blueprint $table) {
             $table->id();
-            $table->string('Statya');
-            $table->string('Opisanie');
-            $table->date('created_at');
+            $table->string('Ima');
+            $table->string('Familia');
+            $table->date('DataRogdenia');
+            $table->date('DataSozdania');
+            $table->string('Email')->comment('Укажите почту');
+            $table->decimal('salary', 10, 2)->default(0)->nullable();
+            $table->integer('age')->unsigned();
 
         });
     }
@@ -25,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        // Schema::dropIfExists('users');
+       // Schema::drop('users');
     }
 };
