@@ -10,16 +10,27 @@ class DatabaseSeeder extends Seeder
 {
     use WithoutModelEvents;
 
-    /**
-     * Seed the application's database.
-     */
     public function run(): void
     {
-        // User::factory(10)->create();
-
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
+        DB::table('use')->insert([
+            'name' => Str::random(10),
+            'email'  => Str::random(10).'@gmail.com',
+            'password' => Hash::make('12345'),
         ]);
+        public function run()
+		{
+			DB::table('domains')->insert([
+				'name' => Str::random(10) . '.com',
+            ]);
+            public function run()
+		{
+			DB::table('users')->insert([
+				'name' => Str::random(10),
+				'email' => Str::random(10).'@gmail.com',
+				'password' => Hash::make('12345'),
+			]);
+		}
+
+            }
     }
 }
