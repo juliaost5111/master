@@ -1,15 +1,27 @@
 <?php
 	namespace App\Http\Controllers;
-	
+    use Illuminate\Support\Facades\DB;
 	class PostController extends Controller
 	{
-	public function show()
+		public function show()
 		{
-			return view('post.show', [
-				'text' => 'page content',
-			]);
+			DB::table('posts')->where('id', '>', 5)->dd();
 		}
 	}
+	$posts = DB::table('use')
+	->where('Pochta', '>', 10)
+	->where('Ima', '<', 20)
+	->get();
+	
+    $post = DB::table('posts')->where('id', 1)->first();
+
+
+	$post = DB::table('use')
+		->whereSlug('Email')
+		->get();
+	
+	dump($post);
+
 ?>
 
 	
