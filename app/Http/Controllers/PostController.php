@@ -13,7 +13,7 @@
 	->where('Ima', '<', 20)
 	->get();
 	
-    $post = DB::table('posts')->where('id', 1)->first();
+    $post = DB::table('use')->where('id', 1)->first();
 
 
 	$post = DB::table('use')
