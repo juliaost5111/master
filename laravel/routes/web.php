@@ -1,8 +1,7 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-{
-Route::match(['get', 'post'], 'post/edit/{id}', 'PostController@editPost');
+use App\Http\Controllers\MessageController;
 
-}
+Route::get('/', [MessageController::class, 'index'])->name('guestbook.index');
+Route::post('/messages', [MessageController::class, 'store'])->name('messages.store');
 ?>
