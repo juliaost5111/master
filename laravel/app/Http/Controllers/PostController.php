@@ -32,4 +32,11 @@ class PostController extends Controller
 }
 Route::match(['get', 'post'], 'post/edit/{id}', 'PostController@editPost');
 }
+
+$account = App\Account::find(10);
+$user->account()->associate($account);
+$user->save();
+
+$user->account()->dissociate();
+$user->save();
 ?>

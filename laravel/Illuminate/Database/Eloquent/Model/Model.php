@@ -8,5 +8,8 @@ class Flight extends Model
   const CREATED_AT = 'creation_date';
   const UPDATED_AT = 'last_update';
 }
+$comment = new App\Comment(['message' => 'Новый комментарий.']);
+$post = App\Post::find(1);
+$post->comments()->save($comment);
 
 ?>
